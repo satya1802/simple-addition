@@ -3,308 +3,125 @@
 > Maintained by QuorQ AI SDLC. Text between `sdlc:auto` markers is regenerated; anything outside them is yours and is kept.
 
 <!-- sdlc:auto:start narrative -->
-### PLAN-OVERVIEW · approved · source: plan
+### DEV-PLAN-001 · approved · source: plan:overall
 
-Development plan is approved at version 3, organized into four sprints of capacity 20 each, covering core arithmetic entry, tape editing/scale, persistence/copy/responsive UX, and privacy/offline support.
+The development plan for 'Simple addition' is approved at version 1. It organizes work into 4 sprints covering 6 epics and 20 user stories, each with story points and a responsible role.
 
-Plan status: approved, version 3. Sprint 1 'Core arithmetic & entry' goal: establish exact-decimal engine, numeric input validation, and the core add-line/running-total loop (capacity 20). Sprint 2 'Tape editing & scale' goal: enable delete, edit, clear, negative numbers, and confirm the tape scales to long lists and the two-number case (capacity 20). Sprint 3 'Persistence, copy & responsive UX' goal: persist the tape across refresh, add copy-to-clipboard, and deliver the responsive mobile/desktop input experience (capacity 20). Sprint 4 'Privacy, zero-friction start & offline' goal: confirm no-signin zero-friction start, verify no data leaves the device, and ship offline/installable PWA support (capacity 20). Backlog is organized into 6 epics (EPIC-001 through EPIC-006) containing 20 stories (US-001 through US-020), each broken into implementation tasks assigned to frontend-agent, qa-agent, security-agent, or devops-agent roles.
+Plan status: approved, version 1. Scope spans EPIC-001 through EPIC-006, broken into 20 user stories (US-001 to US-020), each tagged with points and an owning role (frontend-agent, qa-agent, or security-agent). No sprint-to-story mapping was supplied in the input, so individual story assignment to a specific sprint is inferred only from sprint goal wording, not stated explicitly.
 
-**Related:** SPRINT-1, SPRINT-2, SPRINT-3, SPRINT-4
+**Related:** US-001, US-002, US-003, US-004, US-005, US-006, US-007, US-008, US-009, US-010, US-011, US-012, US-013, US-014, US-015, US-016, US-017, US-018, US-019, US-020
 
-- ⚠ No explicit mapping was provided between backlog items/stories and specific sprints -- sprint goals suggest thematic groupings, but the input does not state which US-### items are scheduled in which sprint, so none is asserted here.
-- ⚠ No execution/completion status (done, in progress, blocked) was given for any sprint, epic, story, or task -- only the planned scope from the approved plan is documented.
+- ⚠ No explicit mapping provided of which backlog items belong to which sprint.
+- ⚠ No execution/completion status (not started, in progress, done) reported for any sprint or story.
+- ⚠ No code, commit, PR, or build artifacts referenced for this phase.
 
-### SPRINT-1 · approved · source: plan:Sprint 1
+### DEV-SPRINT-1 · approved · source: plan:Sprint 1
 
-Sprint 1 'Core arithmetic & entry' targets the exact-decimal engine, numeric input validation, and the core add-line/running-total loop.
+Sprint 1 ('Core arithmetic & entry') targets the core tape: entry, a continuously updating running total, broad number acceptance, input rejection, and penny-accurate decimal arithmetic. Capacity is 20 points.
 
-Goal: Establish exact-decimal engine, numeric input validation, and the core add-line / running-total loop. Capacity: 20 points.
+Goal: Deliver the core tape: entry, continuously updating running total, broad number acceptance, input rejection, and penny-accurate decimal arithmetic. Capacity: 20 points. Likely related stories by goal description: US-001 (add a number as a new line), US-002 (running total updates continuously), US-009 (accept whole numbers/decimals/money/measurements), US-011 (reject non-numeric input), US-012 (penny-accurate total) -- this mapping is inferred from the sprint goal text, not an explicit assignment in the input.
 
-- ⚠ No items are explicitly assigned to this sprint in the input; no status of sprint progress or completion was reported.
+**Related:** US-001, US-002, US-009, US-011, US-012
 
-### SPRINT-2 · approved · source: plan:Sprint 2
+- ⚠ Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 1.
+- ⚠ No status reported on whether Sprint 1 work has started, is in progress, or is complete.
 
-Sprint 2 'Tape editing & scale' targets delete, edit, clear, negative numbers, and scale/two-number verification.
+### DEV-SPRINT-2 · approved · source: plan:Sprint 2
 
-Goal: Enable delete, edit, clear, negative numbers, and confirm the tape scales to long lists and the two-number case. Capacity: 20 points.
+Sprint 2 ('Tape editing & scale') adds delete, edit, and clear for the tape, confirms scaling to unlimited lines and the two-number case, and supports negative numbers for subtraction. Capacity is 20 points.
 
-- ⚠ No items are explicitly assigned to this sprint in the input; no status of sprint progress or completion was reported.
+Goal: Add delete, edit and clear for the tape, confirm it scales to unlimited lines and the two-number case, and support negative numbers for subtraction. Capacity: 20 points. Likely related stories by goal description: US-003 (unlimited-length tape), US-004 (add just two numbers), US-005 (delete a line), US-006 (edit a line's value), US-007 (clear the tape), US-010 (subtract via negative number) -- mapping inferred from goal text only.
 
-### SPRINT-3 · approved · source: plan:Sprint 3
+**Related:** US-003, US-004, US-005, US-006, US-007, US-010
 
-Sprint 3 'Persistence, copy & responsive UX' targets tape persistence across refresh, copy-to-clipboard, and responsive mobile/desktop UX.
+- ⚠ Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 2.
+- ⚠ No status reported on whether Sprint 2 work has started, is in progress, or is complete.
 
-Goal: Persist the tape across refresh, add copy-to-clipboard, and deliver the responsive mobile/desktop input experience. Capacity: 20 points.
+### DEV-SPRINT-3 · approved · source: plan:Sprint 3
 
-- ⚠ No items are explicitly assigned to this sprint in the input; no status of sprint progress or completion was reported.
+Sprint 3 ('Persistence, copy & responsive UX') persists the tape across refresh, adds copy-to-clipboard, and makes the app fully responsive with a mobile keypad and desktop keyboard-only operation. Capacity is 20 points.
 
-### SPRINT-4 · approved · source: plan:Sprint 4
+Goal: Persist the tape across refresh, add copy-to-clipboard, and make the app fully responsive with mobile keypad and desktop keyboard-only operation. Capacity: 20 points. Likely related stories by goal description: US-008 (copy total to clipboard), US-013 (comfortable on any screen size), US-014 (numeric keypad on mobile), US-015 (keyboard-only operation on desktop), US-016 (survive accidental refresh) -- mapping inferred from goal text only.
 
-Sprint 4 'Privacy, zero-friction start & offline' targets no-signin zero-friction start, confirming no data leaves the device, and offline/installable PWA support.
+**Related:** US-008, US-013, US-014, US-015, US-016
 
-Goal: Confirm no-signin zero-friction start, verify no data leaves the device, and ship offline/installable PWA support. Capacity: 20 points.
+- ⚠ Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 3.
+- ⚠ No status reported on whether Sprint 3 work has started, is in progress, or is complete.
 
-- ⚠ No items are explicitly assigned to this sprint in the input; no status of sprint progress or completion was reported.
+### DEV-SPRINT-4 · approved · source: plan:Sprint 4
 
-### EPIC-001 · approved · source: dev:EPIC-001
+Sprint 4 ('Privacy, zero-friction start & offline') confirms zero-friction, account-free start, verifies no data leaves the device, and ships offline use plus home-screen install. Capacity is 20 points.
+
+Goal: Confirm zero-friction, account-free start, verify no data leaves the device, and ship offline use plus home-screen install. Capacity: 20 points. Likely related stories by goal description: US-017 (single tape per device), US-018 (start with no sign-in), US-019 (keep numbers off any server), US-020 (offline use and home-screen install) -- mapping inferred from goal text only.
+
+**Related:** US-017, US-018, US-019, US-020
+
+- ⚠ Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 4.
+- ⚠ No status reported on whether Sprint 4 work has started, is in progress, or is complete.
+
+### EPIC-001 · approved · source: plan:EPIC-001
 
 Epic covering adding-machine tape entry and the continuously updating running total.
 
-Epic: Adding-machine tape entry and running total. No role assigned at epic level. Contains stories US-001 (add a number as a new line), US-002 (see running total update continuously), US-003 (build a tape of unlimited length), and US-004 (add just two numbers).
+EPIC-001 'Adding-machine tape entry and running total' groups: US-001 Add a number as a new line on the tape (5 pts, frontend-agent); US-002 See the running total update continuously (3 pts, frontend-agent); US-003 Build a tape of unlimited length (3 pts, frontend-agent); US-004 Add just two numbers (1 pt, qa-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-001, US-002, US-003, US-004
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided.
 
-### US-001 · approved · source: dev:US-001
+### EPIC-002 · approved · source: plan:EPIC-002
 
-Story: add a number as a new line on the tape. 5 points, owned by frontend-agent.
+Epic covering correcting and managing the tape: delete, edit, clear, and copy-to-clipboard.
 
-Planned tasks: T1 Implement addLine reducer action (frontend-agent); T2 Build entry field confirm flow (frontend-agent); T3 Parse value via decimal_engine before add (frontend-agent); T4 Empty-entry guard tests (qa-agent).
-
-**Related:** EPIC-001, US-001-T1, US-001-T2, US-001-T3, US-001-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks -- only planned scope from the approved plan is available.
-
-### US-002 · approved · source: dev:US-002
-
-Story: see the running total update continuously. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Derived total selector (frontend-agent); T2 Sticky total display (frontend-agent); T3 Total update tests (qa-agent).
-
-**Related:** EPIC-001, US-002-T1, US-002-T2, US-002-T3
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-003 · approved · source: dev:US-003
-
-Story: build a tape of unlimited length. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Optimize large-list rendering (frontend-agent); T2 Auto-scroll to newest line (frontend-agent); T3 Large-tape performance test (qa-agent).
-
-**Related:** EPIC-001, US-003-T1, US-003-T2, US-003-T3
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-004 · approved · source: dev:US-004
-
-Story: add just two numbers. 1 point, owned by qa-agent.
-
-Planned tasks: T1 Two-entry regression test (qa-agent); T2 UX flow confirmation (frontend-agent).
-
-**Related:** EPIC-001, US-004-T1, US-004-T2
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### EPIC-002 · approved · source: dev:EPIC-002
-
-Epic covering correcting and managing the tape (delete, edit, clear, copy).
-
-Epic: Correcting and managing the tape. No role assigned at epic level. Contains stories US-005 (delete a single line), US-006 (edit a line's value), US-007 (clear the tape and start again), and US-008 (copy the total to the clipboard).
+EPIC-002 'Correcting and managing the tape' groups: US-005 Delete a single line from the tape (3 pts, frontend-agent); US-006 Edit a line's value (5 pts, frontend-agent); US-007 Clear the tape and start again (3 pts, frontend-agent); US-008 Copy the total to the clipboard (3 pts, frontend-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-005, US-006, US-007, US-008
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided.
 
-### US-005 · approved · source: dev:US-005
-
-Story: delete a single line from the tape. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Implement deleteLine reducer action (frontend-agent); T2 Per-line delete control (frontend-agent); T3 Recalculate total on delete (frontend-agent); T4 Delete scenario tests (qa-agent).
-
-**Related:** EPIC-002, US-005-T1, US-005-T2, US-005-T3, US-005-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-006 · approved · source: dev:US-006
-
-Story: edit a line's value. 5 points, owned by frontend-agent.
-
-Planned tasks: T1 Implement editLine reducer action (frontend-agent); T2 Inline edit UI with cancel (frontend-agent); T3 Reject invalid edits (frontend-agent); T4 Recalculate total on edit (frontend-agent); T5 Edit scenario tests (qa-agent).
-
-**Related:** EPIC-002, US-006-T1, US-006-T2, US-006-T3, US-006-T4, US-006-T5
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-007 · approved · source: dev:US-007
-
-Story: clear the tape and start again. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Implement clearTape reducer action (frontend-agent); T2 Confirm-before-clear dialog (frontend-agent); T3 Persist cleared state (frontend-agent); T4 Refocus entry field after clear (frontend-agent).
-
-**Related:** EPIC-002, US-007-T1, US-007-T2, US-007-T3, US-007-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-- ⚠ No dedicated QA task listed for this story, unlike most others -- unclear if clear-tape behavior has test coverage planned.
-
-### US-008 · approved · source: dev:US-008
-
-Story: copy the total to the clipboard. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Clipboard write adapter (frontend-agent); T2 Copy control with confirmation (frontend-agent); T3 Fallback selectable-text path (frontend-agent); T4 Clipboard success/fallback tests (qa-agent).
-
-**Related:** EPIC-002, US-008-T1, US-008-T2, US-008-T3, US-008-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### EPIC-003 · approved · source: dev:EPIC-003
+### EPIC-003 · approved · source: plan:EPIC-003
 
 Epic covering number handling and exact decimal arithmetic.
 
-Epic: Number handling and exact decimal arithmetic. No role assigned at epic level. Contains stories US-009 (enter whole numbers, decimals, money amounts and measurements), US-010 (subtract via negative number), US-011 (reject non-numeric input at point of typing), and US-012 (penny-accurate total).
+EPIC-003 'Number handling and exact decimal arithmetic' groups: US-009 Enter whole numbers, decimals, money amounts and measurements (3 pts, frontend-agent); US-010 Subtract by entering a negative number (2 pts, frontend-agent); US-011 Have non-numeric input rejected at the point of typing (3 pts, frontend-agent); US-012 Get a total that is correct to the penny (5 pts, frontend-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-009, US-010, US-011, US-012
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided, including no confirmation of how penny-accurate decimal arithmetic (US-012) was implemented.
 
-### US-009 · approved · source: dev:US-009
+### EPIC-004 · approved · source: plan:EPIC-004
 
-Story: enter whole numbers, decimals, money amounts and measurements. 3 points, owned by frontend-agent.
+Epic covering responsive use on phone and desktop.
 
-Planned tasks: T1 Implement numeric format parsing (frontend-agent); T2 Wire entry field to parser (frontend-agent); T3 Format acceptance tests (qa-agent).
-
-**Related:** EPIC-003, US-009-T1, US-009-T2, US-009-T3
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-010 · approved · source: dev:US-010
-
-Story: subtract by entering a negative number. 2 points, owned by frontend-agent.
-
-Planned tasks: T1 Accept leading minus sign (frontend-agent); T2 Mobile sign control (frontend-agent); T3 Style negative lines distinctly (frontend-agent); T4 Negative-number tests (qa-agent).
-
-**Related:** EPIC-003, US-010-T1, US-010-T2, US-010-T3, US-010-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-011 · approved · source: dev:US-011
-
-Story: have non-numeric input rejected at the point of typing. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Keystroke-level input filtering (frontend-agent); T2 Rejection feedback (frontend-agent); T3 Incomplete-value guard on confirm (frontend-agent); T4 Validation test suite (qa-agent).
-
-**Related:** EPIC-003, US-011-T1, US-011-T2, US-011-T3, US-011-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-012 · approved · source: dev:US-012
-
-Story: get a total that is correct to the penny. 5 points, owned by frontend-agent.
-
-Planned tasks: T1 Integrate decimal.js/big.js wrapper (frontend-agent); T2 Wire tape_store sum to decimal_engine (frontend-agent); T3 Precision regression tests (qa-agent); T4 Document rounding rules (frontend-agent).
-
-**Related:** EPIC-003, US-012-T1, US-012-T2, US-012-T3, US-012-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-- ⚠ Task T4 'Document rounding rules' is assigned to frontend-agent but no rounding-rules document was provided as input -- content of that documentation is not available to cross-reference.
-
-### EPIC-004 · approved · source: dev:EPIC-004
-
-Epic covering comfortable use on both phone and desktop.
-
-Epic: Works on a phone and at a desk. No role assigned at epic level. Contains stories US-013 (use the tape comfortably on any screen size), US-014 (numeric keypad on mobile), and US-015 (drive the whole tape from the keyboard on desktop).
+EPIC-004 'Works on a phone and at a desk' groups: US-013 Use the tape comfortably on any screen size (5 pts, frontend-agent); US-014 Get a numeric keypad on mobile (2 pts, frontend-agent); US-015 Drive the whole tape from the keyboard on desktop (3 pts, frontend-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-013, US-014, US-015
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided.
 
-### US-013 · approved · source: dev:US-013
+### EPIC-005 · approved · source: plan:EPIC-005
 
-Story: use the tape comfortably on any screen size. 5 points, owned by frontend-agent.
+Epic covering tape continuity across browser sessions.
 
-Planned tasks: T1 Responsive layout implementation (frontend-agent); T2 Breakpoint testing (qa-agent); T3 Orientation change handling (qa-agent).
-
-**Related:** EPIC-004, US-013-T1, US-013-T2, US-013-T3
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-014 · approved · source: dev:US-014
-
-Story: get a numeric keypad on mobile. 2 points, owned by frontend-agent.
-
-Planned tasks: T1 Numeric inputmode configuration (frontend-agent); T2 Keep keypad open after confirm (frontend-agent); T3 Enlarge control tap targets (frontend-agent); T4 Mobile keypad tests (qa-agent).
-
-**Related:** EPIC-004, US-014-T1, US-014-T2, US-014-T3, US-014-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-015 · approved · source: dev:US-015
-
-Story: drive the whole tape from the keyboard on desktop. 3 points, owned by frontend-agent.
-
-Planned tasks: T1 Auto-focus entry field on load (frontend-agent); T2 Enter-to-add handler (frontend-agent); T3 Full keyboard tab order and focus indicators (frontend-agent); T4 Keyboard navigation & contrast tests (qa-agent).
-
-**Related:** EPIC-004, US-015-T1, US-015-T2, US-015-T3, US-015-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### EPIC-005 · approved · source: dev:EPIC-005
-
-Epic covering tape continuity in the browser across refreshes, single-tape-per-device model.
-
-Epic: Tape continuity in the browser. No role assigned at epic level. Contains stories US-016 (survive an accidental refresh) and US-017 (work with one tape at a time on this device).
+EPIC-005 'Tape continuity in the browser' groups: US-016 Survive an accidental refresh (5 pts, frontend-agent); US-017 Work with one tape at a time on this device (1 pt, qa-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-016, US-017
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided, including no confirmation of the persistence mechanism used for US-016.
 
-### US-016 · approved · source: dev:US-016
+### EPIC-006 · approved · source: plan:EPIC-006
 
-Story: survive an accidental refresh. 5 points, owned by frontend-agent.
+Epic covering open, free, account-free, and private-by-default operation, including offline use.
 
-Planned tasks: T1 localStorage read/write adapter (frontend-agent); T2 Sync tape_store on every change (frontend-agent); T3 Graceful degradation when storage unavailable (frontend-agent); T4 Persistence tests (qa-agent).
-
-**Related:** EPIC-005, US-016-T1, US-016-T2, US-016-T3, US-016-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-017 · approved · source: dev:US-017
-
-Story: work with one tape at a time on this device. 1 point, owned by qa-agent.
-
-Planned tasks: T1 Confirm single-tape data model (frontend-agent); T2 Single-tape UX test (qa-agent).
-
-**Related:** EPIC-005, US-017-T1, US-017-T2
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### EPIC-006 · approved · source: dev:EPIC-006
-
-Epic covering open, free, private-by-default access: no sign-in, no server-side data, offline/installable use.
-
-Epic: Open, free and private by default. No role assigned at epic level. Contains stories US-018 (start using the app immediately with no sign-in), US-019 (keep numbers off any server), and US-020 (keep using the app offline and from the home screen).
+EPIC-006 'Open, free and private by default' groups: US-018 Start using the app immediately with no sign-in (1 pt, qa-agent); US-019 Keep my numbers off any server (2 pts, security-agent); US-020 Keep using the app offline and from the home screen (5 pts, frontend-agent). Epic itself has no points and no assigned role.
 
 **Related:** US-018, US-019, US-020
 
-- ⚠ No points or owning role recorded for the epic itself; no completion status reported.
-
-### US-018 · approved · source: dev:US-018
-
-Story: start using the app immediately with no sign-in. 1 point, owned by qa-agent.
-
-Planned tasks: T1 Verify zero-friction boot flow (frontend-agent); T2 Confirm no account UI exists (qa-agent).
-
-**Related:** EPIC-006, US-018-T1, US-018-T2
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
-
-### US-019 · approved · source: dev:US-019
-
-Story: keep numbers off any server. 2 points, owned by security-agent.
-
-Planned tasks: T1 Network traffic audit (security-agent); T2 Static-only hosting configuration (devops-agent); T3 Privacy-friendly analytics only (security-agent).
-
-**Related:** EPIC-006, US-019-T1, US-019-T2, US-019-T3
-
-- ⚠ No completion/status, audit results, or hosting configuration output reported for this story or its tasks.
-
-### US-020 · approved · source: dev:US-020
-
-Story: keep using the app offline and from the home screen. 5 points, owned by frontend-agent.
-
-Planned tasks: T1 Configure service worker caching (frontend-agent); T2 Web app manifest (frontend-agent); T3 CloudFront caching headers (devops-agent); T4 Offline and installability tests (qa-agent).
-
-**Related:** EPIC-006, US-020-T1, US-020-T2, US-020-T3, US-020-T4
-
-- ⚠ No completion/status or test results reported for this story or its tasks.
+- ⚠ No development/ticket status reported for any story in this epic (not started, in progress, done).
+- ⚠ No code or test evidence provided, including no confirmation that US-019's no-data-leaves-device guarantee has been implemented or verified.
 <!-- sdlc:auto:end narrative -->

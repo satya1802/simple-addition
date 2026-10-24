@@ -5,7 +5,7 @@
 <!-- sdlc:auto:start overview -->
 Simple addition
 
-**Documentation version:** v5
+**Documentation version:** v6
 <!-- sdlc:auto:end overview -->
 
 ## Contents
@@ -15,7 +15,7 @@ Simple addition
 |---|---|
 | [Requirements](requirements/README.md) | v1 approved |
 | [Architecture](architecture/README.md) | 15 entries |
-| [Development](development/README.md) | 31 entries |
+| [Development](development/README.md) | 11 entries |
 | [Testing](testing/README.md) | 1 entry |
 | [Deployment](deployment/README.md) | 1 entry |
 | [Maintenance](maintenance/README.md) | 1 entry |
@@ -30,7 +30,7 @@ Simple addition
 | [Runbook](deployment/runbook.md) | not deployed yet |
 | [Release notes](deployment/release-notes.md) | 0 releases |
 | [Traceability matrix](traceability-matrix.md) | 20 requirements |
-| [Changelog](CHANGELOG.md) | 5 versions |
+| [Changelog](CHANGELOG.md) | 6 versions |
 <!-- sdlc:auto:end contents -->
 
 ## Open gaps
@@ -56,15 +56,22 @@ Simple addition
 
 ### Development
 
-- No explicit mapping was provided between backlog items/stories and specific sprints -- sprint goals suggest thematic groupings, but the input does not state which US-### items are scheduled in which sprint, so none is asserted here.
-- No execution/completion status (done, in progress, blocked) was given for any sprint, epic, story, or task -- only the planned scope from the approved plan is documented.
-- No items are explicitly assigned to this sprint in the input; no status of sprint progress or completion was reported.
-- No points or owning role recorded for the epic itself; no completion status reported.
-- No completion/status or test results reported for this story or its tasks -- only planned scope from the approved plan is available.
-- No completion/status or test results reported for this story or its tasks.
-- No dedicated QA task listed for this story, unlike most others -- unclear if clear-tape behavior has test coverage planned.
-- Task T4 'Document rounding rules' is assigned to frontend-agent but no rounding-rules document was provided as input -- content of that documentation is not available to cross-reference.
-- No completion/status, audit results, or hosting configuration output reported for this story or its tasks.
+- No explicit mapping provided of which backlog items belong to which sprint.
+- No execution/completion status (not started, in progress, done) reported for any sprint or story.
+- No code, commit, PR, or build artifacts referenced for this phase.
+- Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 1.
+- No status reported on whether Sprint 1 work has started, is in progress, or is complete.
+- Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 2.
+- No status reported on whether Sprint 2 work has started, is in progress, or is complete.
+- Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 3.
+- No status reported on whether Sprint 3 work has started, is in progress, or is complete.
+- Sprint-to-story assignment is inferred from goal wording only; input does not explicitly list which stories belong to Sprint 4.
+- No status reported on whether Sprint 4 work has started, is in progress, or is complete.
+- No development/ticket status reported for any story in this epic (not started, in progress, done).
+- No code or test evidence provided.
+- No code or test evidence provided, including no confirmation of how penny-accurate decimal arithmetic (US-012) was implemented.
+- No code or test evidence provided, including no confirmation of the persistence mechanism used for US-016.
+- No code or test evidence provided, including no confirmation that US-019's no-data-leaves-device guarantee has been implemented or verified.
 
 ### Testing
 
