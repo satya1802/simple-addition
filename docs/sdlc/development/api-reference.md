@@ -9,9 +9,7 @@
 <!-- sdlc:auto:end endpoints -->
 
 <!-- sdlc:auto:start drift -->
-**Designed but missing:**
-
-- GET /
+_Code matches the designed API._
 <!-- sdlc:auto:end drift -->
 
 <!-- sdlc:auto:start source -->

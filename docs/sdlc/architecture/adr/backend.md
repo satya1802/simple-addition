@@ -1,24 +1,23 @@
 <!-- sdlc:auto:start adr -->
-# ADR-0002: Use FastAPI (reserved, nothing deployed at launch) for Backend
+# ADR-0002: Use FastAPI for Backend
 
-Status: Proposed  
-Date: 2026-09-22
+Status: Accepted  
+Date: 2026-10-24
 
 ## Context and Problem Statement
 
-Which Backend technology does the project use? Decided in architecture v1.
+Which Backend technology does the project use? Decided in architecture v2.
 
 ## Considered Options
 
-- FastAPI (reserved, nothing deployed at launch)
+- FastAPI
 - No backend at all
-- Node/Express (if a server is ever needed)
 
 ## Decision Outcome
 
-Chosen option: FastAPI (reserved, nothing deployed at launch), because Approved stack and named as the choice of record. This design deploys nothing behind the app: every sum happens in the browser and the tape lives in local storage, so no API is needed now. FastAPI is kept in reserve to serve static files or to power future saved-history/sharing features.
+Chosen option: FastAPI, because The product genuinely needs no server at launch: every sum happens in the browser and the tape lives in local storage. FastAPI is named as the backend of record and, if deployed at all, only as a minimal service serving the static files. It is kept in reserve for a future saved-history or sharing feature, both deliberately excluded now.
 
 ## Consequences
 
-Naming a backend that isn't deployed adds no runtime cost or attack surface today; the trade-off is simply that any future server work must build the API from scratch, which is intentional given those features are out of scope.
+Carrying a backend name with nothing behind the app is deliberate — zero runtime cost today, zero provider move the day a server is wanted.
 <!-- sdlc:auto:end adr -->

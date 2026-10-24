@@ -1,24 +1,24 @@
 <!-- sdlc:auto:start adr -->
-# ADR-0001: Use React + TypeScript (PWA) for Frontend
+# ADR-0001: Use React for Frontend
 
-Status: Proposed  
-Date: 2026-09-22
+Status: Accepted  
+Date: 2026-10-24
 
 ## Context and Problem Statement
 
-Which Frontend technology does the project use? Decided in architecture v1.
+Which Frontend technology does the project use? Decided in architecture v2.
 
 ## Considered Options
 
-- React + TypeScript (PWA)
-- Vanilla TS/Web Components
+- React
 - Svelte
+- Vue
 
 ## Decision Outcome
 
-Chosen option: React + TypeScript (PWA), because Approved stack. React's live-list rendering fits the tape (lines appearing, edited, deleted with the total updating instantly), and TypeScript type-checks the exact-decimal number handling before ship. A single React codebase delivers responsive phone-and-desk behaviour, the mobile numeric keypad via input attributes, Enter-to-add on desktop, and — as a PWA — offline use and install-to-home-screen.
+Chosen option: React, because The whole product lives in the browser and the tape is a live list — lines appearing, being edited or deleted, the running total updating instantly — which React handles well. Written in TypeScript so exact-decimal number handling is type-checked before shipping, and a single codebase delivers the phone keypad, desktop Enter-to-add, offline-after-first-load and install-to-home-screen behaviour.
 
 ## Consequences
 
-React ships more baseline JS than a hand-rolled vanilla app, marginally increasing the offline cache size; negligible for an app this small and outweighed by maintainability and type safety.
+A SPA framework is more than a trivial calculator strictly needs, but it keeps the responsive, PWA and editable-list requirements in one maintainable codebase.
 <!-- sdlc:auto:end adr -->

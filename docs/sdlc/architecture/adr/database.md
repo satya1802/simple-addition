@@ -1,24 +1,23 @@
 <!-- sdlc:auto:start adr -->
-# ADR-0003: Use PostgreSQL (reserved, no database at launch) for Database
+# ADR-0003: Use PostgreSQL for Database
 
-Status: Proposed  
-Date: 2026-09-22
+Status: Accepted  
+Date: 2026-10-24
 
 ## Context and Problem Statement
 
-Which Database technology does the project use? Decided in architecture v1.
+Which Database technology does the project use? Decided in architecture v2.
 
 ## Considered Options
 
-- PostgreSQL (reserved, no database at launch)
-- No database (current design)
-- SQLite (if a lightweight later store suffices)
+- PostgreSQL
+- No database
 
 ## Decision Outcome
 
-Chosen option: PostgreSQL (reserved, no database at launch), because Approved stack. Nothing is kept on a server, so no database runs at launch — the current tape sits in browser local storage. PostgreSQL is the right name for later: its native numeric type stores exact decimal money values without rounding drift, matching the penny-accuracy requirement if saved tapes or accounts are ever added.
+Chosen option: PostgreSQL, because Nothing is kept on a server at launch, so there is no database to run: the current tape sits in browser local storage with no accounts, cross-device sync or history. PostgreSQL is the right name for later because it stores exact decimal money values natively without rounding drift, which matters given penny accuracy is a hard requirement.
 
 ## Consequences
 
-Deferring the database keeps launch operationally free and privacy-clean; the trade-off is no cross-device or long-term history, which is a deliberate scope exclusion.
+No operational database cost now; if saved tapes or accounts arrive later, the exact-decimal column type is already the correct home for the values.
 <!-- sdlc:auto:end adr -->

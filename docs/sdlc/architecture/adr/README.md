@@ -3,8 +3,8 @@
 <!-- sdlc:auto:start index -->
 | ADR | Layer | Choice | Status |
 |---|---|---|---|
-| [ADR-0001](frontend.md) | Frontend | React + TypeScript (PWA) | Proposed |
-| [ADR-0002](backend.md) | Backend | FastAPI (reserved, nothing deployed at launch) | Proposed |
-| [ADR-0003](database.md) | Database | PostgreSQL (reserved, no database at launch) | Proposed |
-| [ADR-0004](cloud.md) | Cloud | AWS (S3 + CloudFront, EU region) | Proposed |
+| [ADR-0001](frontend.md) | Frontend | React | Accepted |
+| [ADR-0002](backend.md) | Backend | FastAPI | Accepted |
+| [ADR-0003](database.md) | Database | PostgreSQL | Accepted |
+| [ADR-0004](cloud.md) | Cloud | AWS | Accepted |
 <!-- sdlc:auto:end index -->

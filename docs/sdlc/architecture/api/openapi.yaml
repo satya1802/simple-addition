@@ -2,54 +2,32 @@
 openapi: 3.1.0
 info:
   title: Simple addition
-  version: architecture-v1
+  version: architecture-v2
   description: Designed API from the approved architecture (not extracted from code).
-paths:
-  /:
-    get:
-      summary: Serve the static React/PWA application bundle (index.html and assets)
-        over CloudFront. This is the only network interact
-      description: Serve the static React/PWA application bundle (index.html and assets)
-        over CloudFront. This is the only network interaction at launch; no line values
-        or totals are ever transmitted.
-      operationId: get
-      parameters: []
-      responses:
-        '200':
-          description: Static HTML/JS/CSS bundle and service worker
+paths: {}
 components:
   schemas:
-    tape:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-      required:
-      - id
-      - created_at
-      - updated_at
     tape_line:
       type: object
       properties:
         id:
           type: string
-          format: uuid
-        tape_id:
-          type: string
-          format: uuid
-        position:
-          type: integer
         value:
           type: number
+        position:
+          type: integer
       required:
       - id
-      - tape_id
-      - position
       - value
+      - position
+    tape:
+      type: object
+      properties:
+        id:
+          type: string
+        updated_at:
+          type: string
+          format: date-time
+      required:
+      - id
+      - updated_at

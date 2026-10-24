@@ -9,10 +9,10 @@ Pushes to `main` run `.github/workflows/deploy.yml`, which builds the API image 
 <!-- sdlc:auto:start environments -->
 | Name | Service | Runtime | Scaling | Environment |
 |---|---|---|---|---|
-| s3_static_bucket | AWS S3 (EU region) | Static object storage | Managed, effectively unlimited for a static bundle | dev |
-| cloudfront_cdn | AWS CloudFront | Global CDN edge with HTTPS | Auto-scaled edge caching | dev |
-| browser_client | React PWA (client) | User browser + service worker cache | Per-device; offline after first load | dev |
-| fastapi_reserve | FastAPI (reserved, not deployed) | Python/Uvicorn — provisioned only if backend features are added later | N/A at launch | dev |
+| S3 static bucket | AWS S3 | Static object storage (EU region) | Managed by AWS, effectively unlimited for a static bundle | dev |
+| CloudFront CDN | AWS CloudFront | CDN edge over HTTPS, EU-pinned origin | Auto-scaled by AWS | dev |
+| Browser PWA | User device | Modern browser with service worker + local storage | Per device | dev |
+| FastAPI static server (reserved, not deployed) | FastAPI | Python ASGI (uvicorn) | Single small instance if ever used | dev |
 <!-- sdlc:auto:end environments -->
 
 <!-- sdlc:auto:start live -->
@@ -22,11 +22,11 @@ _Not deployed yet._
 <!-- sdlc:auto:start topology -->
 ```mermaid
 graph LR
-  n_s3_static_bucket["s3_static_bucket<br/>AWS S3 (EU region)"]
-  n_cloudfront_cdn["cloudfront_cdn<br/>AWS CloudFront"]
-  n_browser_client["browser_client<br/>React PWA (client)"]
-  n_fastapi_reserve["fastapi_reserve<br/>FastAPI (reserved, not deployed)"]
-  n_browser_client -->|"HTTPS"| n_cloudfront_cdn
-  n_cloudfront_cdn -->|"HTTPS"| n_s3_static_bucket
+  n_S3_static_bucket["S3 static bucket<br/>AWS S3"]
+  n_CloudFront_CDN["CloudFront CDN<br/>AWS CloudFront"]
+  n_Browser_PWA["Browser PWA<br/>User device"]
+  n_FastAPI_static_server__reserved__not_deployed_["FastAPI static server (reserved, not deployed)<br/>FastAPI"]
+  n_Browser_PWA -->|"HTTPS"| n_CloudFront_CDN
+  n_CloudFront_CDN -->|"HTTPS"| n_S3_static_bucket
 ```
 <!-- sdlc:auto:end topology -->

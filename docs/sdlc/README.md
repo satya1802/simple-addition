@@ -5,7 +5,7 @@
 <!-- sdlc:auto:start overview -->
 Simple addition
 
-**Documentation version:** v4
+**Documentation version:** v5
 <!-- sdlc:auto:end overview -->
 
 ## Contents
@@ -14,7 +14,7 @@ Simple addition
 | Document | State |
 |---|---|
 | [Requirements](requirements/README.md) | v1 approved |
-| [Architecture](architecture/README.md) | 9 entries |
+| [Architecture](architecture/README.md) | 15 entries |
 | [Development](development/README.md) | 31 entries |
 | [Testing](testing/README.md) | 1 entry |
 | [Deployment](deployment/README.md) | 1 entry |
@@ -30,7 +30,7 @@ Simple addition
 | [Runbook](deployment/runbook.md) | not deployed yet |
 | [Release notes](deployment/release-notes.md) | 0 releases |
 | [Traceability matrix](traceability-matrix.md) | 20 requirements |
-| [Changelog](CHANGELOG.md) | 4 versions |
+| [Changelog](CHANGELOG.md) | 5 versions |
 <!-- sdlc:auto:end contents -->
 
 ## Open gaps
@@ -45,7 +45,14 @@ Simple addition
 
 ### Architecture
 
-- No documented trigger/milestone for when the reserved FastAPI backend or PostgreSQL database would actually be activated.
+- Input does not state who approved this architecture or on what date.
+- No explicit linkage given between this architecture and specific requirement IDs (US-001..US-020); traceability_matrix for this phase cannot be populated from architecture input alone.
+- No requirement IDs explicitly cited for this component in the input.
+- Not deployed at launch -- confirm with deployment phase whether/when this is ever activated.
+- No requirement IDs explicitly cited for this critical path in the input.
+- Input does not state how tape relates structurally to tape_line (e.g. one-to-many) beyond both being listed as entities.
+- FastAPI node is explicitly reserved/not deployed -- confirm actual deployment status once a deployment phase exists.
+- Saved-history feature using PostgreSQL is explicitly out of scope now -- no current requirement drives this decision.
 
 ### Development
 
